@@ -1,0 +1,22 @@
+.wrapper{
+ margin-bottom: 74px;
+ padding: 54px 20px 20px 35px;
+ .row{
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+  text_align: center;
+  word-wrap: break-word;
+  }
+}
+input[type="submit"].btn-block{
+  margin:15px 0;
+}
+
+.container{
+  padding-bottom:85px;
+}
+header{
+  position:fixed;
+  top:0;
+  z-index:10;
+}

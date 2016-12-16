@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<%= form_for(@tweet, url: choose_new_or_edit) do |f| %>
+ <% if @tweet.errors.any? %>
+  <div id="error_explanation">
+   <h2><%= @tweet.errors.count %>件のエラーがあります。</h2>
+   <ul>
+   <% @tweet.errors.full_messages.each do |msg|  %>
+    <li><%= msg %></li>
+   <% end %>
+   </ul>
+  </div>
+ <% end %>
+
+ <%= f.label :content %>
+ <%= f.text_field :content, class: 'form-control' %>
+ <br>
+ <%= f.submit '投稿',class: 'btn btn-primary btn-block'%>
+<% end %>
+
+<%= link_to "つぶやき一覧に戻る", tweets_path %>
